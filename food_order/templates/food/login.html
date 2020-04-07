@@ -1,0 +1,48 @@
+{% extends 'food/base.html' %}
+{% load static %}
+{% block content %}
+   
+
+
+   
+ <!-- Title Page-->
+    
+
+    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+        <div class="wrapper wrapper--w680"  style="padding-top: 15%;">
+            <div class="card card-1" >
+            
+                <div class="card-body">
+                  <center><h1>Login here</h1></center> 
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Username</label>
+                          <input type="text" name='username' class="form-control" id="" aria-describedby="" placeholder="Enter username">
+                           </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Password</label>
+                          <input type="password" name='password' class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+            
+                        <button class="btn btn--radius btn--green" type="submit">Login</button>
+              
+                      </form>       
+                      <a href ="{% url 'password_reset' %}">Forgot Password?</a> 
+                        </div>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
+
+{% endblock %}
+
+    
